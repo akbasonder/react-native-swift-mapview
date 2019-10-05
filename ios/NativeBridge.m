@@ -7,3 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "React/RCTViewManager.h"
+
+@interface RCT_EXTERN_MODULE(MapViewManager, RCTViewManager)
+
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;
+}
+  RCT_EXPORT_VIEW_PROPERTY(mapCenter, NSDictionary)
+  RCT_EXPORT_VIEW_PROPERTY(markers, NSArray)  
+@end
